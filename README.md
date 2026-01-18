@@ -79,7 +79,7 @@ defaults write com.apple.menuextra.clock Show24Hour 1
 ```
 
 ## 10. Setup lazyvim
-Follow: [](https://www.lazyvim.org/installation)
+Follow: [Lazyvim Docs](https://www.lazyvim.org/installation)
 
 ## 11. "Make ZSH Great Again!"
 1. [Install oh-my-zsh](https://ohmyz.sh/#install)
