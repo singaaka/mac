@@ -64,7 +64,12 @@ nix --extra-experimental-features "nix-command flakes" run home-manager/master -
 
 > **_NOTE:_** `--extra-experimental-features "nix-command flakes"` is only needed the first time. After home-manager is activated for the first time, it will write `~/.config/nix/nix.conf` to auto configure the experimental features. Next runs of nix command can then omit this extra flag.
 
-## 8. Mac keyboard and touchpad config
+## 8. Sudo using touch id
+```bash
+sudo bash -c 'echo "auth    sufficient    pam_tid.so" >> /etc/pam.d/sudo_local'
+```
+
+## 9. Mac keyboard and touchpad config
 ```bash
 defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain KeyRepeat -int 2
@@ -73,10 +78,10 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write com.apple.menuextra.clock Show24Hour 1
 ```
 
-## 9. Setup lazyvim
+## 10. Setup lazyvim
 Follow: [](https://www.lazyvim.org/installation)
 
-## 10. "Make ZSH Great Again!"
+## 11. "Make ZSH Great Again!"
 1. [Install oh-my-zsh](https://ohmyz.sh/#install)
 2. Reopen terminal
 3. [Install recommended fonts](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#meslo-nerd-font-patched-for-powerlevel10k)
@@ -106,7 +111,7 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 EOF"
 ```
 
-## 11. Aliases for easy software management
+## 12. Aliases for easy software management
 ```bash
 cat << EOF >> ~/.zshrc
 # Nix and brew related aliases
