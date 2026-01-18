@@ -11,7 +11,7 @@ Stuff that I like to use:
 
 ## Why don't I use nix darwin?
 
-I tried it and only interacted it once while setting up my mac some 3 years ago. It doesn't get in my way (lovely!). But, I realised that when it will break, it will be too much work for me. The complexity works for now but it is complexity nonetheless. And I was using it simply to set a few flags for my keyboard and touchpad. Nix-darwin is too overpowered for my use case.
+I tried it and only interacted with it once while setting up my mac some 3 years ago. It doesn't get in my way (lovely!). But, I realised that when it breaks, it will be too much work for me. The complexity works for now but it is complexity nonetheless. And I was using it simply to set a few flags for my keyboard and touchpad. Nix-darwin is too overpowered for my use case.
 
 # Setup a new mac
 Steps to make a mac behave the way I like
