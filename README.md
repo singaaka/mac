@@ -18,9 +18,9 @@ Steps to make a mac behave the way I like
 
 ## 1. Mac command line tools
 [Apple Docs](https://developer.apple.com/documentation/xcode/installing-the-command-line-tools/)
-   ```bash
-   xcode-select --install
-   ``` 
+```bash
+xcode-select --install
+``` 
 
 ## 2. Nix
 Install nix in "multi user mode". Get the command from [Nix Downloads](https://nixos.org/download/#nix-install-macos)
@@ -42,14 +42,14 @@ brew install --cask brave-browser ghostty visual-studio-code libreoffice
 ## 5. Setup git and gihub
 1. Follow this doc to setup ssh keys: [Github - Setup SSH Keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 2. Setup name and email in git config
-  ```bash
-  cat << EOF > ~/.gitconfig
-  [user]
-    name = <Bruce Wayne - Change me!>
-    email = <bat@the.man - Change me!>
-  
-  EOF
-  ```
+    ```bash
+    cat << EOF > ~/.gitconfig
+    [user]
+        name = <Bruce Wayne - Change me!>
+        email = <bat@the.man - Change me!>
+
+    EOF
+    ```
 
 ## 6. Clone home-manager configs
 ```bash
@@ -89,27 +89,27 @@ Follow: [Lazyvim Docs](https://www.lazyvim.org/installation)
 5. [Install zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
 6. [Install zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
 7. Add plugins
-```bash
-sed -i '' 's/plugins=(git)/plugins=(git docker zsh-syntax-highlighting zsh-autosuggestions)/' ~/.zshrc
-```
+   ```bash
+   sed -i '' 's/plugins=(git)/plugins=(git docker zsh-syntax-highlighting zsh-autosuggestions)/' ~/.zshrc
+   ```
 8. Add fix for slow paste
-```bash
-cat << EOF >> ~/.zshrc
-### <Fix slowness of pastes with zsh-syntax-highlighting.zsh>
-pasteinit() {
-  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
-  zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
-}
+   ```bash
+   cat << EOF >> ~/.zshrc
+   ### <Fix slowness of pastes with zsh-syntax-highlighting.zsh>
+   pasteinit() {
+     OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+     zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
+   }
 
-pastefinish() {
-  zle -N self-insert $OLD_SELF_INSERT
-}
-zstyle :bracketed-paste-magic paste-init pasteinit
-zstyle :bracketed-paste-magic paste-finish pastefinish
-### </Fix slowness of pastes with zsh-syntax-highlighting.zsh>
+   pastefinish() {
+     zle -N self-insert $OLD_SELF_INSERT
+   }
+   zstyle :bracketed-paste-magic paste-init pasteinit
+   zstyle :bracketed-paste-magic paste-finish pastefinish
+   ### </Fix slowness of pastes with zsh-syntax-highlighting.zsh>
 
-EOF
-```
+   EOF
+   ```
 
 ## 12. Aliases for easy software management
 ```bash
