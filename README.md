@@ -94,8 +94,8 @@ sed -i '' 's/plugins=(git)/plugins=(git docker zsh-syntax-highlighting zsh-autos
 ```
 8. Add fix for slow paste
 ```bash
-bash -c "cat << EOF >> ~/.zshrc
-### Start: Fix slowness of pastes with zsh-syntax-highlighting.zsh
+cat << EOF >> ~/.zshrc
+### <Fix slowness of pastes with zsh-syntax-highlighting.zsh>
 pasteinit() {
   OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
   zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
@@ -106,9 +106,9 @@ pastefinish() {
 }
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
-### End: Fix slowness of pastes with zsh-syntax-highlighting.zsh
+### </Fix slowness of pastes with zsh-syntax-highlighting.zsh>
 
-EOF"
+EOF
 ```
 
 ## 12. Aliases for easy software management
