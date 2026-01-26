@@ -47,7 +47,8 @@ brew install --cask brave-browser ghostty visual-studio-code libreoffice
     [user]
         name = <Bruce Wayne - Change me!>
         email = <bat@the.man - Change me!>
-
+    [init]
+        defaultBranch = main
     EOF
     ```
 
