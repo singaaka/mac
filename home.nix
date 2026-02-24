@@ -47,14 +47,14 @@
     lazygit
     hey
     aria2
+    gh #github-cli
+    just
 
     # Language tools
     go
-    elixir
-    erlang
-    nodejs
-    pnpm
-    python3
+    elixir erlang
+    nodejs pnpm
+    python3 uv
     zig
     openjdk
   ];
